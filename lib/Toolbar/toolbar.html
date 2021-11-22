@@ -1,0 +1,102 @@
+<div class="barnyardjs-editor-toolbar__inner">
+  <div class="barnyardjs-toolbar-control-group">
+    <select data-action="toggleHeader">
+      <option value="0">Paragraph</option>
+      <option value="1">H1</option>
+      <option value="2">H2</option>
+      <option value="3">H3</option>
+      <option value="4">H4</option>
+      <option value="5">H5</option>
+      <option value="6">H6</option>
+    </select>
+    <select data-action="setFontSize">
+      <option value="6px">6</option>
+      <option value="7px">7</option>
+      <option value="8px">8</option>
+      <option value="9px">9</option>
+      <option value="10px">10</option>
+      <option value="11px">11</option>
+      <option value="12px" selected>12</option>
+      <option value="14px">14</option>
+      <option value="18px">18</option>
+      <option value="24px">24</option>
+      <option value="30px">30</option>
+      <option value="36px">36</option>
+      <option value="48px">48</option>
+      <option value="60px">60</option>
+      <option value="72px">72</option>
+      <option value="96px">96</option>
+    </select>
+  </div>
+
+  <div class="barnyardjs-toolbar-control-group">
+    <div class="button-wrapper text-color">
+      <button title="Text Color" data-action="openTextColor" class="colored">
+        <i class="bi bi-type"></i>
+      </button>
+
+      <div class="barnyardjs-editor-toolbar__color-selector button-extender hidden">
+        <input type="color" data-action="setTextColor">
+      </div>
+    </div>
+    <div class="button-wrapper background-color">
+      <button title="Background Color" data-action="openBackgroundColor" class="colored">
+        <i class="bi bi-brush"></i>
+      </button>
+
+      <div class="barnyardjs-editor-toolbar__color-selector button-extender hidden">
+        <input type="color" data-action="setBackgroundColor">
+      </div>
+    </div>
+  </div>
+
+  <div class="barnyardjs-toolbar-control-group">
+    <button title="Capitalize" data-action="capitalize"><i class="bi bi-caret-up-fill"></i></button>
+    <button title="Lowercase" data-action="lowercase"><i class="bi bi-caret-down-fill"></i></button>
+  </div>
+
+  <div class="barnyardjs-toolbar-control-group">
+    <button title="Bold" data-action="bold"><i class="bi bi-type-bold"></i></button>
+    <button title="Italic" data-action="italic"><i class="bi bi-type-italic"></i></button>
+    <button title="Underline" data-action="underline"><i class="bi bi-type-underline"></i></button>
+    <button title="Strikethrough" data-action="strikethrough"><i class="bi bi-type-strikethrough"></i></button>
+  </div>
+
+  <div class="barnyardjs-toolbar-control-group">
+    <button title="Align Left" data-action="alignLeft"><i class="bi bi-justify-left"></i></button>
+    <button title="Align Center" data-action="alignCenter"><i class="bi bi-text-center"></i></button>
+    <button title="Align Right" data-action="alignRight"><i class="bi bi-justify-right"></i></button>
+  </div>
+
+  <div class="barnyardjs-toolbar-control-group">
+    <button title="Ordered List" data-action="orderedList"><i class="bi bi-list-ol"></i></button>
+    <button title="Unordered List" data-action="unorderedList"><i class="bi bi-list-ul"></i></button>
+  </div>
+
+  <div class="barnyardjs-toolbar-control-group">
+    <button title="Increase Indent" data-action="increaseIndent"><i class="bi bi-text-indent-left"></i></button>
+    <button title="Decrease Indent" data-action="decreaseIndent"><i class="bi bi-text-indent-right"></i></button>
+  </div>
+
+  <div class="barnyardjs-toolbar-control-group">
+    <button title="Blockquote" data-action="blockQuote"><i class="bi bi-quote"></i></button>
+    <button title="Code Block" data-action="codeBlock"><i class="bi bi-code-slash"></i></button>
+    <button title="Superscript" data-action="superscript">A<sup>x</sup></button>
+    <button title="Subscript" data-action="subscript">A<sub>x</sub></button>
+  </div>
+
+  <div class="barnyardjs-toolbar-control-group">
+    <button title="Undo" data-action="undo"><i class="bi bi-arrow-counterclockwise"></i></button>
+    <button title="Redo" data-action="redo"><i class="bi bi-arrow-clockwise"></i></button>
+  </div>
+
+  <div class="barnyardjs-toolbar-control-group">
+    <button title="Clear Formatting" data-action="clearFormatting"><i class="bi bi-eraser"></i></button>
+    <button title="Fullscreen" data-action="fullscreen" data-action-value="1" class="fullscreen">
+      <i class="bi bi-arrows-fullscreen"></i>
+    </button>
+    <button title="Exit Fullscreen" data-action="fullscreen" data-action-value="0" class="exit-fullscreen">
+      <i class="bi bi-arrows-angle-contract"></i>
+    </button>
+  </div>
+</div>
