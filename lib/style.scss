@@ -14,6 +14,7 @@
     border: $standard-border;
     border-radius: 0.25em;
     overflow: hidden;
+    border-collapse: collapse;
 
     // Editor styles
     .barnyardjs-editor {
@@ -33,7 +34,7 @@
       }
     }
 
-    // Handle fullscreen
+    // Fullscreen
     &.fullscreen {
       height: 100vh;
       width: 100vw;
@@ -46,6 +47,15 @@
       .barnyardjs-editor {
         height: 100%;
       }
+    }
+
+    // Styles
+    &.minimal-style {
+      border: $minimal-border;
+    }
+
+    &.modern-style {
+      border: $modern-border;
     }
   }
 }

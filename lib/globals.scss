@@ -4,19 +4,116 @@
 // Standard style
 $standard-border-color: rgb(210, 210, 210);
 $standard-border: 1px solid $standard-border-color;
+$standard-toolar-bg-color: rgb(240, 240, 240);
+
+// Minimal style
+$minimal-border-color: rgb(68, 68, 68);
+$minimal-border: 1px solid $minimal-border-color;
+$minimal-toolar-bg-color: rgb(255, 255, 255);
 
 // Modern style
-$modern-border-color: rgb(230, 230, 230);
-$modern-border: 2px solid $modern-border-color;
+$modern-border-color: rgb(160, 160, 160);
+$modern-border: 1px solid $minimal-border-color;
+$modern-toolar-bg-color: #e7eaef;
+$modern-button-selected-color: #6385c5;
+$modern-button-selected-bg-color: #d5deee;
+
 
 // ------ Mixins ------ //
 @mixin padded {
   padding: 0.75em;
 }
 
-@mixin pressedButton {
+@mixin controlGroup {
+  display: flex;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+@mixin button {
+  padding: 0.5em;
+  min-height: 2em;
+  min-width: 2em;
+  outline: none;
+
+  i {
+    font-size: 1.25em;
+  }
+}
+
+// Standard mixins
+@mixin standardControlGroup {
+  @include controlGroup;
+
+  border: $standard-border;
+  border-radius: 0.25em;
+}
+
+@mixin standardButton {
+  @include button;
+
+  background-color: white;
+  border: none;
+  color: rgb(80, 80, 80);
+}
+
+@mixin standardButton_pressed {
   background-color: #f0f0f0;
   -moz-box-shadow: inset 0 0 2px #808080;
   -webkit-box-shadow: inset 0 0 2px #808080;
   box-shadow: inset 0 0 2px #808080;
+}
+
+// Minimal mixins
+@mixin minimalControlGroup {
+  @include controlGroup;
+
+  padding: 0 1em;
+  margin-bottom: .5em;
+  border: none;
+  border-right: $minimal-border;
+  border-radius: 0;
+}
+@mixin minimalButton {
+  @include button;
+
+  background-color: white;
+  color: rgb(110, 110, 110);
+}
+
+@mixin minimalButton_pressed {
+  background-color: #f0f0f0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+// Modern mixins
+@mixin modernControlGroup {
+  @include controlGroup;
+
+  padding: 0 .5em;
+  margin-bottom: .5em;
+  border: none;
+}
+@mixin modernButton {
+  @include button;
+
+  background-color: $modern-toolar-bg-color;
+  color: rgb(100, 100, 100);
+  border-radius: .35em;
+
+  i {
+    font-size: 1.5em;
+  }
+}
+
+@mixin modernButton_pressed {
+  color: $modern-button-selected-color;
+  background-color: $modern-button-selected-bg-color !important;
+
+  background-color: #f0f0f0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
