@@ -71,7 +71,7 @@ $modern-button-selected-bg-color: #d5deee;
   padding: 0 1em;
   margin-bottom: .5em;
   border: none;
-  border-right: $minimal-border;
+  //order-right: $minimal-border;
   border-radius: 0;
 }
 @mixin minimalButton {

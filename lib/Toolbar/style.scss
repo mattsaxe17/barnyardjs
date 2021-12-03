@@ -1,5 +1,8 @@
 @import '../globals';
 
+$default-text-color-indicator: #000000;
+$default-background-color-indicator: #000000;
+
 .barnyardjs-editor-wrapper {
   // Standard style
     .barnyardjs-editor-toolbar {
@@ -34,12 +37,12 @@
 
           .text-color i {
             position: relative;
-            border-bottom: 3px solid black;
+            border-bottom: 3px solid $default-text-color-indicator;
           }
 
           .background-color i {
             position: relative;
-            border-bottom: 3px solid white;
+            border-bottom: 3px solid $default-background-color-indicator;
           }
 
           button.exit-fullscreen {
