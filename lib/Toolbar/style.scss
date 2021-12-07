@@ -64,6 +64,8 @@ $default-background-color-indicator: #000000;
 
   // Fullscreen
   &.fullscreen {
+    z-index: 10000;
+
     .barnyardjs-editor-toolbar {
       .barnyardjs-editor-toolbar__inner {
         .barnyardjs-toolbar-control-group {
