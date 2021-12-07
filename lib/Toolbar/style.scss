@@ -84,6 +84,7 @@ $default-background-color-indicator: #000000;
     .barnyardjs-editor-toolbar {
       border-bottom: $minimal-border;
       background-color: $minimal-toolar-bg-color;
+      padding: $standard-margin-padding;
 
       .barnyardjs-editor-toolbar__inner {
         gap: 0;

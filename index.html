@@ -3,14 +3,21 @@
     <script src="dist/bundle.js"></script>
   </head>
   <body>
-    <div id="editorDiv" class="minimal-style"></div>
+    <div id="editorDiv0" class="editor"></div>
+    <div id="editorDiv1" class="editor minimal-style"></div>
+    <div id="editorDiv2" class="editor modern-style"></div>
   </body>
   <script>
-    const editor = createEditor('editorDiv')
+    const editors = [];
+
+    editors.push(createEditor('editorDiv0'));
+    editors.push(createEditor('editorDiv1'));
+    editors.push(createEditor('editorDiv2'));
   </script>
   <style>
-    #editorDiv {
+    .editor {
       max-width: 750px;
+      margin-bottom: 50px;
     }
   </style>
 </html>
