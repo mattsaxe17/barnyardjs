@@ -9,7 +9,7 @@ $standard-border: 1px solid $standard-border-color;
 $standard-toolar-bg-color: rgb(240, 240, 240);
 
 // Minimal style
-$minimal-border-color: rgb(68, 68, 68);
+$minimal-border-color: rgb(168, 168, 168);
 $minimal-border: 1px solid $minimal-border-color;
 $minimal-toolar-bg-color: rgb(255, 255, 255);
 
@@ -97,12 +97,14 @@ $modern-button-selected-bg-color: #d5deee;
   margin-bottom: $standard-margin-padding;
   border: none;
 }
+
 @mixin modernButton {
   @include button;
 
   background-color: $modern-toolar-bg-color;
-  color: rgb(78, 78, 78);
+  color: rgb(65, 65, 65);
   border-radius: 0.35em;
+  padding: .25em;
 
   i {
     font-size: 1.5em;

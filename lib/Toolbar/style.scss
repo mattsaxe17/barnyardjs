@@ -13,7 +13,7 @@ $default-background-color-indicator: #000000;
       .barnyardjs-editor-toolbar__inner {
         display: flex;
         flex-wrap: wrap;
-        gap: .75em;
+        gap: $standard-margin-padding;
 
         .barnyardjs-toolbar-control-group {
           .button-wrapper {
@@ -64,7 +64,7 @@ $default-background-color-indicator: #000000;
 
   // Fullscreen
   &.fullscreen {
-    z-index: 10000;
+    z-index: 99999;
 
     .barnyardjs-editor-toolbar {
       .barnyardjs-editor-toolbar__inner {
@@ -118,7 +118,7 @@ $default-background-color-indicator: #000000;
         .barnyardjs-toolbar-control-group {
           @include modernControlGroup;
 
-          gap: .25em;
+          gap: $standard-margin-padding;
 
           button,
           select {
