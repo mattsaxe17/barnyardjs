@@ -1,0 +1,32 @@
+// Used for global mixins and variables
+
+// ------ Variables ------ //
+$standard-margin-padding: 0.5em;
+$standard-border-radius: 0.25em;
+
+// ------ Mixins ------ //
+@mixin padded {
+  padding: $standard-margin-padding;
+}
+
+@mixin rounded {
+  border-radius: $standard-border-radius;
+}
+
+@mixin controlGroup {
+  display: flex;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+}
+
+@mixin button {
+  padding: $standard-margin-padding;
+  min-height: 2em;
+  min-width: 2em;
+  outline: none;
+
+  i {
+    font-size: 1.25em;
+  }
+}

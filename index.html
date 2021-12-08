@@ -3,9 +3,14 @@
     <script src="dist/bundle.js"></script>
   </head>
   <body>
-    <div id="editorDiv0" class="editor"></div>
-    <div id="editorDiv1" class="editor minimal-style"></div>
-    <div id="editorDiv2" class="editor modern-style"></div>
+    <div id="editors">
+      <div id="editorDiv0" class="editor"></div>
+      <div id="editorDiv1" class="editor dark"></div>
+      <div id="editorDiv2" class="editor minimal-theme"></div>
+      <div id="editorDiv3" class="editor minimal-theme dark"></div>
+      <div id="editorDiv4" class="editor modern-theme"></div>
+      <div id="editorDiv5" class="editor modern-theme dark"></div>
+    </div>
   </body>
   <script>
     const editors = [];
@@ -13,11 +18,19 @@
     editors.push(createEditor('editorDiv0'));
     editors.push(createEditor('editorDiv1'));
     editors.push(createEditor('editorDiv2'));
+    editors.push(createEditor('editorDiv3'));
+    editors.push(createEditor('editorDiv4'));
+    editors.push(createEditor('editorDiv5'));
   </script>
   <style>
+    #editors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
     .editor {
-      max-width: 750px;
-      margin-bottom: 50px;
+      width: calc(50% - 1em);
     }
   </style>
 </html>

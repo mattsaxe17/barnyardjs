@@ -1,63 +1,64 @@
-@import '../globals';
+@import '../style/globals';
+@import '../style/themes';
 
 $default-text-color-indicator: #000000;
 $default-background-color-indicator: #000000;
 
 .barnyardjs-editor-wrapper {
   // Standard style
-    .barnyardjs-editor-toolbar {
-      @include padded;
-      border-bottom: $standard-border;
-      background-color: $standard-toolar-bg-color;
+  .barnyardjs-editor-toolbar {
+    @include padded;
+    border-bottom: $standard-border;
+    background-color: $standard-toolbar-bg-color;
 
-      .barnyardjs-editor-toolbar__inner {
-        display: flex;
-        flex-wrap: wrap;
-        gap: $standard-margin-padding;
+    .barnyardjs-editor-toolbar__inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $standard-margin-padding;
 
-        .barnyardjs-toolbar-control-group {
-          .button-wrapper {
-            background-color: transparent
+      .barnyardjs-toolbar-control-group {
+        .button-wrapper {
+          background-color: $standard-toolbar-button-bg-color;
+        }
+
+        @include standardControlGroup;
+
+        button,
+        select {
+          @include standardButton;
+
+          &.selected {
+            @include standardButton_pressed;
           }
 
-          @include standardControlGroup;
-
-          button,
-          select {
-            @include standardButton;
-
-            &.selected {
-              @include standardButton_pressed;
-            }
-
-            &:active {
-              @include standardButton_pressed;
-            }
+          &:active {
+            @include standardButton_pressed;
           }
+        }
 
-          .text-color i {
-            position: relative;
-            border-bottom: 3px solid $default-text-color-indicator;
-          }
+        .text-color i {
+          position: relative;
+          border-bottom: 3px solid $default-text-color-indicator;
+        }
 
-          .background-color i {
-            position: relative;
-            border-bottom: 3px solid $default-background-color-indicator;
-          }
+        .background-color i {
+          position: relative;
+          border-bottom: 3px solid $default-background-color-indicator;
+        }
 
-          button.exit-fullscreen {
+        button.exit-fullscreen {
+          display: none;
+        }
+
+        .barnyardjs-editor-toolbar__color-selector {
+          position: absolute;
+          z-index: 1000;
+          background-color: white;
+
+          &.hidden {
             display: none;
           }
-
-          .barnyardjs-editor-toolbar__color-selector {
-            position: absolute;
-            z-index: 1000;
-            background-color: white;
-
-            &.hidden {
-              display: none;
-            }
-          }
+        }
       }
     }
   }
@@ -69,6 +70,7 @@ $default-background-color-indicator: #000000;
     .barnyardjs-editor-toolbar {
       .barnyardjs-editor-toolbar__inner {
         .barnyardjs-toolbar-control-group {
+
           button.fullscreen {
             display: none;
           }
@@ -81,11 +83,11 @@ $default-background-color-indicator: #000000;
     }
   }
 
-  // Styles
-  &.minimal-style {
+  // Themes
+  &.minimal-theme {
     .barnyardjs-editor-toolbar {
       border-bottom: $minimal-border;
-      background-color: $minimal-toolar-bg-color;
+      background-color: $minimal-toolbar-bg-color;
       padding: $standard-margin-padding;
 
       .barnyardjs-editor-toolbar__inner {
@@ -98,7 +100,8 @@ $default-background-color-indicator: #000000;
           select {
             @include minimalButton;
 
-            &.selected, &:active {
+            &.selected,
+            &:active {
               @include minimalButton_pressed;
             }
           }
@@ -107,10 +110,10 @@ $default-background-color-indicator: #000000;
     }
   }
 
-  &.modern-style {
+  &.modern-theme {
     .barnyardjs-editor-toolbar {
       border-bottom: $modern-border;
-      background-color: $modern-toolar-bg-color;
+      background-color: $modern-toolbar-bg-color;
 
       .barnyardjs-editor-toolbar__inner {
         gap: 0;
@@ -118,13 +121,14 @@ $default-background-color-indicator: #000000;
         .barnyardjs-toolbar-control-group {
           @include modernControlGroup;
 
-          gap: $standard-margin-padding;
+          gap: .25em;
 
           button,
           select {
             @include modernButton;
 
-            &.selected, &:active {
+            &.selected,
+            &:active {
               @include modernButton_pressed;
             }
           }

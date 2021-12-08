@@ -1,13 +1,10 @@
 @import url('bootstrap-icons/font/bootstrap-icons.css');
+@import 'themes';
 @import 'globals';
 
 // Styles
 * {
   box-sizing: border-box;
-
-  body {
-    background-color: lightblue;
-  }
 
   // Editor wrapper
   .barnyardjs-editor-wrapper {
@@ -51,7 +48,7 @@
       }
     }
 
-    // Styles
+    // Themes
     &.minimal-style {
       border: $minimal-border;
     }

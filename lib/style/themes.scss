@@ -1,0 +1,100 @@
+@import 'globals';
+
+// ------ Standard theme ------ //
+$standard-border-color: rgb(210, 210, 210);
+$standard-border: 1px solid $standard-border-color;
+$standard-toolbar-bg-color: rgb(240, 240, 240);
+$standard-toolbar-button-color: rgb(48, 48, 48);;
+$standard-toolbar-button-bg-color: white;
+$standard-toolbar-button-border: none;
+
+@mixin standardControlGroup {
+  @include controlGroup;
+  @include rounded;
+
+  border: $standard-border;
+}
+
+@mixin standardButton {
+  @include button;
+
+  color: $standard-toolbar-button-color;
+  background-color: $standard-toolbar-button-bg-color;
+  border: $standard-toolbar-button-border;
+}
+
+@mixin standardButton_pressed {
+  background-color: #f0f0f0;
+  -moz-box-shadow: inset 0 0 2px #808080;
+  -webkit-box-shadow: inset 0 0 2px #808080;
+  box-shadow: inset 0 0 2px #808080;
+}
+
+// ----- Minimal theme ----- //
+$minimal-border-color: rgb(168, 168, 168);
+$minimal-border: 1px solid $minimal-border-color;
+$minimal-toolbar-bg-color: rgb(255, 255, 255);
+$minimal-toolbar-button-color: rgb(80, 80, 80);;
+$minimal-toolbar-button-bg-color: white;
+$minimal-toolbar-button-border: none;
+
+@mixin minimalControlGroup {
+  @include controlGroup;
+
+  padding: 0 $standard-margin-padding;
+  margin-bottom: $standard-margin-padding;
+}
+
+@mixin minimalButton {
+  @include button;
+
+  background-color: $minimal-toolbar-button-bg-color;
+  color: $minimal-toolbar-button-color;
+}
+
+@mixin minimalButton_pressed {
+  background-color: #f0f0f0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+// ------ Modern theme ------ //
+$modern-border-color: rgb(160, 160, 160);
+$modern-border: 1px solid $modern-border-color;
+$modern-toolbar-bg-color: rgb(240, 240, 240);
+$modern-toolbar-button-color: rgb(65, 65, 65);
+$modern-toolbar-button-bg-color: white;
+$modern-toolbar-button-border: none;
+$modern-button-selected-color: #6385c5;
+$modern-button-selected-bg-color: #d5deee;
+
+@mixin modernControlGroup {
+  @include controlGroup;
+
+  padding: 0 $standard-margin-padding;
+  margin-bottom: $standard-margin-padding;
+}
+
+@mixin modernButton {
+  @include button;
+  @include rounded;
+
+  background-color: $modern-toolbar-bg-color;
+  color: $modern-toolbar-button-color;
+  padding: 0.25em;
+
+  i {
+    font-size: 1.5em;
+  }
+}
+
+@mixin modernButton_pressed {
+  color: $modern-button-selected-color;
+  background-color: $modern-button-selected-bg-color !important;
+
+  background-color: #f0f0f0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

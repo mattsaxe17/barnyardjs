@@ -1,4 +1,5 @@
-@import '../globals';
+@import '../style/globals';
+@import '../style/themes';
 
 .barnyardjs-editor-tag-dropdown {
   padding: 0.25em;
@@ -7,6 +8,7 @@
   min-width: 150px;
   max-height: 200px;
   overflow-y: scroll;
+  z-index: 99999;
 
   &::-webkit-scrollbar {
     width: 8px;
