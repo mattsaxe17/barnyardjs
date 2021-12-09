@@ -4,12 +4,18 @@
   </head>
   <body>
     <div id="editors">
-      <div id="editorDiv0" class="editor"></div>
-      <div id="editorDiv1" class="editor dark"></div>
-      <div id="editorDiv2" class="editor minimal-theme"></div>
-      <div id="editorDiv3" class="editor minimal-theme dark"></div>
-      <div id="editorDiv4" class="editor modern-theme"></div>
-      <div id="editorDiv5" class="editor modern-theme dark"></div>
+      <div class="light">
+        <h1>Light</h1>
+        <div id="editorDiv0" class="editor"></div>
+        <div id="editorDiv2" class="editor minimal-theme"></div>
+        <div id="editorDiv4" class="editor modern-theme"></div>
+      </div>
+      <div class="dark">
+        <h1>Dark</h1>
+        <div id="editorDiv1" class="editor dark"></div>
+        <div id="editorDiv3" class="editor minimal-theme dark"></div>
+        <div id="editorDiv5" class="editor modern-theme dark"></div>
+      </div>
     </div>
   </body>
   <script>
@@ -23,14 +29,38 @@
     editors.push(createEditor('editorDiv5'));
   </script>
   <style>
+    body {
+      margin: 0;
+    }
+
     #editors {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1em;
+    }
+
+    #editors > div {
+      width: 50%;
+      height: 100vh;
+    }
+
+    #editors > .light {
+      border-right: 6px dashed rgb(70, 70, 70);
+    }
+
+    #editors > .dark {
+      background-color: rgb(70, 70, 70);
+      border-left: 6px dashed white;
     }
 
     .editor {
-      width: calc(50% - 1em);
+      margin: 2em;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .dark h1 {
+      color: white;
     }
   </style>
 </html>
