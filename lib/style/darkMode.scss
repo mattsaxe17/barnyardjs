@@ -1,0 +1,109 @@
+// ------ Standard dark theme ------ //
+$standard-border-color-dark: rgb(136, 136, 136);
+$standard-border-dark: 1px solid $standard-border-color;
+$standard-toolbar-bg-color-dark: rgb(70, 70, 70);
+$standard-toolbar-button-color-dark: rgb(255, 255, 255);
+$standard-toolbar-button-bg-color-dark: rgb(116, 116, 116);
+$standard-toolbar-button-border-dark: none;
+$standard-button-selected-bg-color-dark: rgb(150, 150, 150);
+
+// ----- Minimal dark theme ----- //
+$minimal-border-color-dark: rgb(168, 168, 168);
+$minimal-border-dark: 1px solid $minimal-border-color;
+$minimal-toolbar-bg-color-dark: rgb(70, 70, 70);
+$minimal-toolbar-button-color-dark: white;
+$minimal-toolbar-button-bg-color-dark: rgb(70, 70, 70);
+$minimal-toolbar-button-border-dark: none;
+$minimal-button-selected-bg-color-dark: rgb(105, 105, 105);
+
+// ------ Modern dark theme ------ //
+$modern-border-color-dark: rgb(160, 160, 160);
+$modern-border-dark: 1px solid $modern-border-color;
+$modern-toolbar-bg-color-dark: rgb(54, 54, 54);
+$modern-toolbar-button-color-dark: rgb(230, 230, 230);
+$modern-toolbar-button-bg-color-dark: rgb(54, 54, 54);
+$modern-toolbar-button-border-dark: none;
+$modern-button-selected-color-dark: #7f9dd4;
+$modern-button-selected-bg-color-dark: #444d5c;
+
+.barnyardjs-editor-wrapper {
+  &.dark {
+    .barnyardjs-editor-toolbar {
+      border-bottom: $standard-border-dark;
+      background-color: $standard-toolbar-bg-color-dark;
+      padding: $standard-margin-padding;
+
+      .barnyardjs-editor-toolbar__inner {
+        .barnyardjs-toolbar-control-group {
+          border-color: $standard-border-color-dark;
+
+          button,
+          select {
+            color: $standard-toolbar-button-color-dark;
+            background-color: $standard-toolbar-button-bg-color-dark;
+
+            &.selected,
+            &:active {
+              background-color: $standard-button-selected-bg-color-dark;
+            }
+          }
+        }
+      }
+    }
+
+    &.minimal-theme {
+      &.dark {
+        .barnyardjs-editor-toolbar {
+          border-bottom: $minimal-border-dark;
+          background-color: $minimal-toolbar-bg-color-dark;
+          padding: $standard-margin-padding;
+
+          .barnyardjs-editor-toolbar__inner {
+            .barnyardjs-toolbar-control-group {
+              border-color: $minimal-border-color-dark;
+
+              button,
+              select {
+                color: $minimal-toolbar-button-color-dark;
+                background-color: $minimal-toolbar-button-bg-color-dark;
+
+                &.selected,
+                &:active {
+                  background-color: $minimal-button-selected-bg-color-dark;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.modern-theme {
+      &.dark {
+        .barnyardjs-editor-toolbar {
+          border-bottom: $modern-border-dark;
+          background-color: $modern-toolbar-bg-color-dark;
+          padding: $standard-margin-padding;
+
+          .barnyardjs-editor-toolbar__inner {
+            .barnyardjs-toolbar-control-group {
+              border-color: $modern-border-color-dark;
+
+              button,
+              select {
+                color: $modern-toolbar-button-color-dark;
+                background-color: $modern-toolbar-button-bg-color-dark;
+
+                &.selected,
+                &:active {
+                  background-color: $modern-button-selected-bg-color-dark;
+                  color: $modern-button-selected-color-dark;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

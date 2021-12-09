@@ -3,6 +3,8 @@
 
 $default-text-color-indicator: #000000;
 $default-background-color-indicator: #000000;
+$default-text-color-indicator-dark: #ffffff;
+$default-background-color-indicator-dark: #ffffff;
 
 .barnyardjs-editor-wrapper {
   // Standard style
@@ -18,7 +20,8 @@ $default-background-color-indicator: #000000;
 
       .barnyardjs-toolbar-control-group {
         .button-wrapper {
-          background-color: $standard-toolbar-button-bg-color;
+          border:none;
+          background-color: transparent;
         }
 
         @include standardControlGroup;
@@ -63,6 +66,21 @@ $default-background-color-indicator: #000000;
     }
   }
 
+  // Dark mode
+  &.dark {
+    .barnyardjs-editor-toolbar__inner {
+      .barnyardjs-toolbar-control-group {
+        .text-color i {
+          border-bottom: 3px solid $default-text-color-indicator-dark;
+        }
+
+        .background-color i {
+          border-bottom: 3px solid $default-background-color-indicator-dark;
+        }
+      }
+    }
+  }
+
   // Fullscreen
   &.fullscreen {
     z-index: 99999;
@@ -70,7 +88,6 @@ $default-background-color-indicator: #000000;
     .barnyardjs-editor-toolbar {
       .barnyardjs-editor-toolbar__inner {
         .barnyardjs-toolbar-control-group {
-
           button.fullscreen {
             display: none;
           }
@@ -121,7 +138,7 @@ $default-background-color-indicator: #000000;
         .barnyardjs-toolbar-control-group {
           @include modernControlGroup;
 
-          gap: .25em;
+          gap: 0.25em;
 
           button,
           select {
