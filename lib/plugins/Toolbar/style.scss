@@ -1,5 +1,5 @@
-@import '../style/globals';
-@import '../style/themes';
+@import '../../style/globals';
+@import '../../style/themes';
 
 $default-text-color-indicator: #000000;
 $default-background-color-indicator: #000000;
@@ -84,6 +84,7 @@ $default-background-color-indicator-dark: #ffffff;
   // Fullscreen
   &.fullscreen {
     z-index: 99999;
+    margin: 0 !important;
 
     .barnyardjs-editor-toolbar {
       .barnyardjs-editor-toolbar__inner {
